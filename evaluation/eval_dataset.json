@@ -1,0 +1,27 @@
+[
+  {
+    "question": "How are environment variables loaded in the CodeRAG system?",
+    "expected_sources": ["src/config.py"],
+    "expected_keywords": ["dotenv", "load_dotenv", "GROQ_API_KEY"]
+  },
+  {
+    "question": "Which cross-encoder model is used for reranking documents?",
+    "expected_sources": ["src/retrieval/reranker.py"],
+    "expected_keywords": ["ms-marco-MiniLM-L-6-v2", "CrossEncoder"]
+  },
+  {
+    "question": "What happens if I try to load the FAISS vector store before building it?",
+    "expected_sources": ["src/indexing/vector_store.py"],
+    "expected_keywords": ["FileNotFoundError", "not found"]
+  },
+  {
+    "question": "How does the VisionProcessor formulate the prompt for architecture diagrams?",
+    "expected_sources": ["src/ingestion/vision_processor.py"],
+    "expected_keywords": ["expert software architect", "data flow", "technologies mentioned"]
+  },
+  {
+    "question": "How does HybridRetriever deduplicate documents retrieved by the multi-query and HyDE retrievers?",
+    "expected_sources": ["src/retrieval/hybrid_search.py"],
+    "expected_keywords": ["_deduplicate", "seen", "set"]
+  }
+]
